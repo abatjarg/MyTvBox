@@ -1,5 +1,5 @@
 //
-//  ABMovieViewController.h
+//  ABMovieCell.h
 //  MyTvBox
 //
 //  Created by Ariunjargal on 10/25/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ABMovieViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ABMovieCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *posterView;
 
 @end

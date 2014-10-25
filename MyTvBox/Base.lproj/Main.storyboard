@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item-->
+        <!--Movie View Controller - In Theaters-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ABViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ABMovieViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,13 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hof-EA-0kb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ze6-ll-x0t"/>
+                    <navigationItem key="navigationItem" title="In Theaters" id="kES-AU-Kfc"/>
+                    <connections>
+                        <outlet property="tableView" destination="Hof-EA-0kb" id="g37-KS-B0b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="-661"/>
+            <point key="canvasLocation" x="1456" y="-661"/>
         </scene>
         <!--View Controller - Item-->
         <scene sceneID="CL9-Cn-U8W">
@@ -67,12 +77,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wrY-97-qPb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="TNZ-T2-cxD">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="TNZ-T2-cxD">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="eGD-d5-fcn"/>
+                        <segue destination="eFO-Uj-ZMT" kind="relationship" relationship="viewControllers" id="eGD-d5-fcn"/>
                         <segue destination="Pwq-dB-Ie9" kind="relationship" relationship="viewControllers" id="QT6-Pk-wE8"/>
                         <segue destination="dh2-ad-I5j" kind="relationship" relationship="viewControllers" id="afh-LA-aWH"/>
                     </connections>
@@ -80,6 +90,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efn-bD-ClI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="22"/>
+        </scene>
+        <!--Navigation Controller - Movie-->
+        <scene sceneID="elc-eJ-dk1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eFO-Uj-ZMT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movie" id="Ze6-ll-x0t"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="1Lc-na-KFI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="4oH-zJ-aOy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOI-j1-46x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="-661"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

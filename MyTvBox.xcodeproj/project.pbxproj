@@ -22,6 +22,9 @@
 		4D1E3DCF19FC2C1E000D376C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E3DCD19FC2C1E000D376C /* InfoPlist.strings */; };
 		4D1E3DD119FC2C1E000D376C /* MyTvBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3DD019FC2C1E000D376C /* MyTvBoxTests.m */; };
 		4D7EE47F19FC326700083C49 /* ABMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE47E19FC326700083C49 /* ABMovieViewController.m */; };
+		4D7EE48319FC5AB300083C49 /* ABMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE48119FC5AB300083C49 /* ABMovieCell.m */; };
+		4D7EE48419FC5AB300083C49 /* ABMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EE48219FC5AB300083C49 /* ABMovieCell.xib */; };
+		4D7EE48619FC5DAA00083C49 /* fury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EE48519FC5DAA00083C49 /* fury.jpg */; };
 		678EF669F53C159FF24024DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D5D6BAD7F8525F0A9168F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,10 @@
 		4D1E3DD019FC2C1E000D376C /* MyTvBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTvBoxTests.m; sourceTree = "<group>"; };
 		4D7EE47D19FC326700083C49 /* ABMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMovieViewController.h; sourceTree = "<group>"; };
 		4D7EE47E19FC326700083C49 /* ABMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMovieViewController.m; sourceTree = "<group>"; };
+		4D7EE48019FC5AB300083C49 /* ABMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMovieCell.h; sourceTree = "<group>"; };
+		4D7EE48119FC5AB300083C49 /* ABMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMovieCell.m; sourceTree = "<group>"; };
+		4D7EE48219FC5AB300083C49 /* ABMovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABMovieCell.xib; sourceTree = "<group>"; };
+		4D7EE48519FC5DAA00083C49 /* fury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fury.jpg; path = ../../../Downloads/fury.jpg; sourceTree = "<group>"; };
 		D1D5D6BAD7F8525F0A9168F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +146,7 @@
 		4D1E3DAC19FC2C1E000D376C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D7EE48519FC5DAA00083C49 /* fury.jpg */,
 				4D1E3DAD19FC2C1E000D376C /* MyTvBox-Info.plist */,
 				4D1E3DAE19FC2C1E000D376C /* InfoPlist.strings */,
 				4D1E3DB119FC2C1E000D376C /* main.m */,
@@ -170,6 +178,9 @@
 			children = (
 				4D7EE47D19FC326700083C49 /* ABMovieViewController.h */,
 				4D7EE47E19FC326700083C49 /* ABMovieViewController.m */,
+				4D7EE48019FC5AB300083C49 /* ABMovieCell.h */,
+				4D7EE48119FC5AB300083C49 /* ABMovieCell.m */,
+				4D7EE48219FC5AB300083C49 /* ABMovieCell.xib */,
 			);
 			name = Movies;
 			sourceTree = "<group>";
@@ -276,9 +287,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7EE48619FC5DAA00083C49 /* fury.jpg in Resources */,
 				4D1E3DBE19FC2C1E000D376C /* Images.xcassets in Resources */,
 				4D1E3DB019FC2C1E000D376C /* InfoPlist.strings in Resources */,
 				4D1E3DB919FC2C1E000D376C /* Main.storyboard in Resources */,
+				4D7EE48419FC5AB300083C49 /* ABMovieCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +345,7 @@
 			files = (
 				4D7EE47F19FC326700083C49 /* ABMovieViewController.m in Sources */,
 				4D1E3DB219FC2C1E000D376C /* main.m in Sources */,
+				4D7EE48319FC5AB300083C49 /* ABMovieCell.m in Sources */,
 				4D1E3DBC19FC2C1E000D376C /* ABViewController.m in Sources */,
 				4D1E3DB619FC2C1E000D376C /* ABAppDelegate.m in Sources */,
 			);

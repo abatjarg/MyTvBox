@@ -7,9 +7,11 @@
 //
 
 #import "ABMovieViewController.h"
+#import "ABMovieCell.h"
 
 @interface ABMovieViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation ABMovieViewController
@@ -27,12 +29,35 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.rowHeight = 200;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView registerNib:[UINib nibWithNibName:@"ABMovieCell" bundle:nil] forCellReuseIdentifier:@"ABMovieCell"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ABMovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ABMovieCell"];
+    
+    [cell.posterView setImage:[UIImage imageNamed:@"fury.jpg"]];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*
@@ -47,3 +72,26 @@
 */
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
