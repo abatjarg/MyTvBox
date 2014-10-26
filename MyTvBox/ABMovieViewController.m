@@ -12,6 +12,7 @@
 @interface ABMovieViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation ABMovieViewController
@@ -29,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tableView.rowHeight = 200;
+    self.tableView.rowHeight = 150;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"ABMovieCell" bundle:nil] forCellReuseIdentifier:@"ABMovieCell"];
