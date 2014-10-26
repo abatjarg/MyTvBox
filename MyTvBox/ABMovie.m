@@ -14,7 +14,7 @@
 {
     self = [super self];
     if (self) {
-        self.title = movies[@"original_name"];
+        self.title = movies[@"original_title"];
         self.imageUrl = movies[@"backdrop_path"];
         self.posterUrl = movies[@"poster_path"];
     }
