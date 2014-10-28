@@ -12,5 +12,8 @@
 @interface ABMovieDetailViewController : UIViewController
 
 @property (strong, nonatomic) ABMovie *movie;
+@property (weak, nonatomic) IBOutlet UIImageView *posterView;
+@property (weak, nonatomic) IBOutlet UILabel *movieTitle;
+@property (weak, nonatomic) IBOutlet UILabel *movieOverview;
 
 @end

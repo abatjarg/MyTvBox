@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *imageUrl;
 @property (strong, nonatomic) NSString *posterUrl;
 @property (strong, nonatomic) NSString *movieGenre;
+@property (strong, nonatomic) NSString *movieOverview;
 
 - (id)initWithDictionary:(NSDictionary *)movie;
 

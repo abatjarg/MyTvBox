@@ -17,6 +17,7 @@
         self.title = movie[@"original_title"];
         self.imageUrl = movie[@"backdrop_path"];
         self.posterUrl = movie[@"poster_path"];
+        self.movieOverview = movie[@"overview"];
         NSMutableArray *array = [[NSMutableArray alloc]initWithArray:[movie objectForKey:@"genres"]];
         if ([array count] != 0) {
             NSLog(@"%@", [array objectAtIndex:0][@"name"]);

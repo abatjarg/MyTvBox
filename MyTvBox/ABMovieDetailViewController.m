@@ -7,6 +7,7 @@
 //
 
 #import "ABMovieDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ABMovieDetailViewController ()
 
@@ -27,12 +28,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.posterView setImageWithURL:[NSURL URLWithString:[self grabImageUrl:self.movie.imageUrl]]];
+    self.movieTitle.text = self.movie.title;
+    self.movieOverview.text = self.movie.movieOverview;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSString *)grabImageUrl:(NSString *)secondPart
+{
+    NSString *firstPart = @"http://image.tmdb.org/t/p/w500/";
+    NSString *url = [NSString stringWithFormat:@"%@%@", firstPart, secondPart];
+    return url;
 }
 
 /*
