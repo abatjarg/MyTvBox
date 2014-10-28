@@ -10,13 +10,19 @@
 
 @implementation ABMovie
 
-- (id)initWithDictionary:(NSDictionary *)movies
+- (id)initWithDictionary:(NSDictionary *)movie
 {
     self = [super self];
     if (self) {
-        self.title = movies[@"original_title"];
-        self.imageUrl = movies[@"backdrop_path"];
-        self.posterUrl = movies[@"poster_path"];
+        self.title = movie[@"original_title"];
+        self.imageUrl = movie[@"backdrop_path"];
+        self.posterUrl = movie[@"poster_path"];
+        NSMutableArray *array = [[NSMutableArray alloc]initWithArray:[movie objectForKey:@"genres"]];
+        if ([array count] != 0) {
+            NSLog(@"%@", [array objectAtIndex:0][@"name"]);
+            self.movieGenre = [array objectAtIndex:0][@"name"];
+        }
+            
     }
     
     return self;

@@ -7,6 +7,7 @@
 //
 
 #import "ABMovieViewController.h"
+#import "ABMovieDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "ABMovie.h"
 #import "ABMovieCell.h"
@@ -86,7 +87,7 @@
         
         if (!connectionError && responseCode == 200) {
             NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            NSLog(@"%@", object);
+            //NSLog(@"%@", object);
             ABMovie *movie = [[ABMovie alloc] initWithDictionary:object];
             [self.movies addObject:movie];
             [self.tableView reloadData];
@@ -117,6 +118,7 @@
     
     ABMovie *movie = self.movies[indexPath.row];
     cell.movieTitle.text = movie.title;
+    cell.movieGenre.text = movie.movieGenre;
     [cell.posterView setImageWithURL:[NSURL URLWithString:[self grabImageUrl:movie.imageUrl]]];
     
     return cell;
@@ -125,18 +127,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"toMovieDetailViewController" sender:indexPath];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([sender isKindOfClass:[NSIndexPath class]]) {
+        if ([segue.destinationViewController isKindOfClass:[ABMovieDetailViewController class]]) {
+            ABMovieDetailViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            ABMovie *movie = self.movies[path.row];
+            targetViewController.movie = movie;
+        }
+    }
+    self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
-*/
 
 @end
 

@@ -19,7 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hof-EA-0kb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,11 +27,31 @@
                     <navigationItem key="navigationItem" title="In Theaters" id="kES-AU-Kfc"/>
                     <connections>
                         <outlet property="tableView" destination="Hof-EA-0kb" id="g37-KS-B0b"/>
+                        <segue destination="IfV-F7-zSV" kind="push" identifier="toMovieDetailViewController" id="G7S-xK-fXE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1456" y="-661"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="ehe-7u-hvf">
+            <objects>
+                <viewController id="IfV-F7-zSV" customClass="ABMovieDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EHV-95-Zuw"/>
+                        <viewControllerLayoutGuide type="bottom" id="VSX-2x-X4T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gag-0n-1bo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iWd-KD-zn8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEs-yy-GOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919" y="-661"/>
         </scene>
         <!--View Controller - Item-->
         <scene sceneID="CL9-Cn-U8W">

@@ -26,6 +26,7 @@
 		4D7EE48419FC5AB300083C49 /* ABMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EE48219FC5AB300083C49 /* ABMovieCell.xib */; };
 		4D7EE48619FC5DAA00083C49 /* fury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EE48519FC5DAA00083C49 /* fury.jpg */; };
 		4D7EE48919FC97C600083C49 /* ABMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE48819FC97C500083C49 /* ABMovie.m */; };
+		4D7EE48C19FF1B3D00083C49 /* ABMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE48B19FF1B3D00083C49 /* ABMovieDetailViewController.m */; };
 		678EF669F53C159FF24024DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D5D6BAD7F8525F0A9168F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		4D7EE48519FC5DAA00083C49 /* fury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fury.jpg; path = ../../../Downloads/fury.jpg; sourceTree = "<group>"; };
 		4D7EE48719FC97C500083C49 /* ABMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMovie.h; sourceTree = "<group>"; };
 		4D7EE48819FC97C500083C49 /* ABMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMovie.m; sourceTree = "<group>"; };
+		4D7EE48A19FF1B3D00083C49 /* ABMovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMovieDetailViewController.h; sourceTree = "<group>"; };
+		4D7EE48B19FF1B3D00083C49 /* ABMovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMovieDetailViewController.m; sourceTree = "<group>"; };
 		D1D5D6BAD7F8525F0A9168F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,6 +189,8 @@
 				4D7EE48219FC5AB300083C49 /* ABMovieCell.xib */,
 				4D7EE48719FC97C500083C49 /* ABMovie.h */,
 				4D7EE48819FC97C500083C49 /* ABMovie.m */,
+				4D7EE48A19FF1B3D00083C49 /* ABMovieDetailViewController.h */,
+				4D7EE48B19FF1B3D00083C49 /* ABMovieDetailViewController.m */,
 			);
 			name = Movies;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			files = (
 				4D7EE47F19FC326700083C49 /* ABMovieViewController.m in Sources */,
 				4D7EE48919FC97C600083C49 /* ABMovie.m in Sources */,
+				4D7EE48C19FF1B3D00083C49 /* ABMovieDetailViewController.m in Sources */,
 				4D1E3DB219FC2C1E000D376C /* main.m in Sources */,
 				4D7EE48319FC5AB300083C49 /* ABMovieCell.m in Sources */,
 				4D1E3DBC19FC2C1E000D376C /* ABViewController.m in Sources */,
