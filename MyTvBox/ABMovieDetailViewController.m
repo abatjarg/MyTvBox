@@ -8,6 +8,7 @@
 
 #import "ABMovieDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "ABReviewCell.h"
 
 @interface ABMovieDetailViewController ()
 
@@ -30,7 +31,12 @@
     // Do any additional setup after loading the view.
     [self.posterView setImageWithURL:[NSURL URLWithString:[self grabImageUrl:self.movie.imageUrl]]];
     self.movieTitle.text = self.movie.title;
-    self.movieOverview.text = self.movie.movieOverview;
+    
+    self.reviewTableView.rowHeight = 45;
+    self.reviewTableView.dataSource = self;
+    self.reviewTableView.delegate = self;
+    
+    [self.reviewTableView registerNib:[UINib nibWithNibName:@"ABReviewCell" bundle:nil] forCellReuseIdentifier:@"ABReviewCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,4 +63,40 @@
 }
 */
 
+- (IBAction)playTrailerButtonPressed:(UIButton *)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?v=q94n3eWOWXM"]];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ABReviewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ABReviewCell"];
+    return cell;
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

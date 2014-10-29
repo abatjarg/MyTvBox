@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ABMovie.h"
 
-@interface ABMovieDetailViewController : UIViewController
+@interface ABMovieDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) ABMovie *movie;
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;
-@property (weak, nonatomic) IBOutlet UILabel *movieOverview;
+
+- (IBAction)playTrailerButtonPressed:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITableView *reviewTableView;
 
 @end
