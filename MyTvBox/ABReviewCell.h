@@ -10,4 +10,7 @@
 
 @interface ABReviewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *criticNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reviewLabel;
+
 @end

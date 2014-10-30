@@ -15,6 +15,8 @@
     self = [super self];
     if (self) {
         self.title = movie[@"original_title"];
+        NSString *imdbID = movie[@"imdb_id"];
+        self.imdbID = [imdbID substringWithRange:NSMakeRange(2, [imdbID length]-2)];
         self.imageUrl = movie[@"backdrop_path"];
         self.posterUrl = movie[@"poster_path"];
         self.movieOverview = movie[@"overview"];

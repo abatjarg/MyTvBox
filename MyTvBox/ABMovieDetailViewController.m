@@ -12,6 +12,9 @@
 
 @interface ABMovieDetailViewController ()
 
+@property (strong, nonatomic) NSString *rottenTomatoesID;
+@property (strong, nonatomic) NSMutableArray *reviews;
+
 @end
 
 @implementation ABMovieDetailViewController
@@ -31,8 +34,10 @@
     // Do any additional setup after loading the view.
     [self.posterView setImageWithURL:[NSURL URLWithString:[self grabImageUrl:self.movie.imageUrl]]];
     self.movieTitle.text = self.movie.title;
+    [self loadData];
+    //[self loadReviewData];
     
-    self.reviewTableView.rowHeight = 45;
+    self.reviewTableView.rowHeight = 80;
     self.reviewTableView.dataSource = self;
     self.reviewTableView.delegate = self;
     
@@ -50,6 +55,53 @@
     NSString *firstPart = @"http://image.tmdb.org/t/p/w500/";
     NSString *url = [NSString stringWithFormat:@"%@%@", firstPart, secondPart];
     return url;
+}
+
+//http://api.rottentomatoes.com/api/public/v1.0/movie_alias.json?id=2713180&type=imdb&apikey=deucvtu94kwb63bvt28wf9xa
+
+- (void)loadData
+{
+    NSString *url = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movie_alias.json?id=%@&type=imdb&apikey=deucvtu94kwb63bvt28wf9xa", self.movie.imdbID];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:12];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
+        
+        NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (!connectionError && responseCode == 200) {
+            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSLog(@"%@", object[@"id"]);
+            [self loadReviewData:object[@"id"]];
+        }
+        else
+        {
+            NSLog(@"Error!!!");
+        }
+        
+    }];
+}
+
+- (void)loadReviewData:(NSString *)rottenTomatoesID
+{
+    //NSLog(@"%@", self.rottenTomatoesID);
+    NSString *url = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%@/reviews.json?review_type=top_critic&page_limit=20&page=1&country=us&apikey=deucvtu94kwb63bvt28wf9xa", rottenTomatoesID];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:12];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
+        
+        NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (!connectionError && responseCode == 200) {
+            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            self.reviews = [[NSMutableArray alloc]initWithArray:[object objectForKey:@"reviews"]];
+            [self.reviewTableView reloadData];
+        }
+        else
+        {
+            NSLog(@"Error!!!");
+        }
+        
+    }];
 }
 
 /*
@@ -70,12 +122,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.reviews count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ABReviewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ABReviewCell"];
+    NSLog(@"%@", self.reviews);
+    cell.criticNameLabel.text = self.reviews[indexPath.row][@"critic"];
+    cell.reviewLabel.text = self.reviews[indexPath.row][@"quote"];
     return cell;
 }
 

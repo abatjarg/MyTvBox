@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *imageUrl;
+@property (strong, nonatomic) NSString *imdbID;
 @property (strong, nonatomic) NSString *posterUrl;
 @property (strong, nonatomic) NSString *movieGenre;
 @property (strong, nonatomic) NSString *movieOverview;
