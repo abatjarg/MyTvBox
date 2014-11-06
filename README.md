@@ -3,7 +3,9 @@ MyTvBox
 
 This is a open source IOS app which allows you to discover new movies and tv shows. 
 
+<img src="https://github.com/abatjarg/MyTvBox/blob/master/Screenshots/Navigation.png" width="200px" />
 <img src="https://github.com/abatjarg/MyTvBox/blob/master/Screenshots/Movies.png" width="200px" />
+
 
 APIs in use
 ----------------------
