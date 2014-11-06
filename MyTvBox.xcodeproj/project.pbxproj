@@ -26,7 +26,11 @@
 		4D78A65B1A09C1D800F42A85 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A6581A09C1D800F42A85 /* UIViewController+RESideMenu.m */; };
 		4D78A65E1A09C21000F42A85 /* ABRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A65D1A09C21000F42A85 /* ABRootViewController.m */; };
 		4D78A6611A09C21D00F42A85 /* ABLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A6601A09C21D00F42A85 /* ABLeftMenuViewController.m */; };
-		4D78A6641A09C22F00F42A85 /* ABFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A6631A09C22F00F42A85 /* ABFirstViewController.m */; };
+		4D78C9271A0B047B00577A3C /* BarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78C9241A0B047B00577A3C /* BarItem.m */; };
+		4D78C9281A0B047B00577A3C /* CBStoreHouseRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78C9261A0B047B00577A3C /* CBStoreHouseRefreshControl.m */; };
+		4D78C92A1A0B068A00577A3C /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D78C9291A0B068A00577A3C /* AKTA.plist */; };
+		4D78C92C1A0B071200577A3C /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D78C92B1A0B071200577A3C /* storehouse.plist */; };
+		4D78C9301A0B0C7700577A3C /* custom.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D78C92F1A0B0C7600577A3C /* custom.plist */; };
 		4D7EE47F19FC326700083C49 /* ABMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE47E19FC326700083C49 /* ABMovieViewController.m */; };
 		4D7EE48319FC5AB300083C49 /* ABMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE48119FC5AB300083C49 /* ABMovieCell.m */; };
 		4D7EE48419FC5AB300083C49 /* ABMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EE48219FC5AB300083C49 /* ABMovieCell.xib */; };
@@ -79,8 +83,13 @@
 		4D78A65D1A09C21000F42A85 /* ABRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRootViewController.m; sourceTree = "<group>"; };
 		4D78A65F1A09C21D00F42A85 /* ABLeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABLeftMenuViewController.h; sourceTree = "<group>"; };
 		4D78A6601A09C21D00F42A85 /* ABLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABLeftMenuViewController.m; sourceTree = "<group>"; };
-		4D78A6621A09C22F00F42A85 /* ABFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFirstViewController.h; sourceTree = "<group>"; };
-		4D78A6631A09C22F00F42A85 /* ABFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFirstViewController.m; sourceTree = "<group>"; };
+		4D78C9231A0B047B00577A3C /* BarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarItem.h; sourceTree = "<group>"; };
+		4D78C9241A0B047B00577A3C /* BarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarItem.m; sourceTree = "<group>"; };
+		4D78C9251A0B047B00577A3C /* CBStoreHouseRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStoreHouseRefreshControl.h; sourceTree = "<group>"; };
+		4D78C9261A0B047B00577A3C /* CBStoreHouseRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStoreHouseRefreshControl.m; sourceTree = "<group>"; };
+		4D78C9291A0B068A00577A3C /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AKTA.plist; sourceTree = "<group>"; };
+		4D78C92B1A0B071200577A3C /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
+		4D78C92F1A0B0C7600577A3C /* custom.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = custom.plist; sourceTree = "<group>"; };
 		4D7EE47D19FC326700083C49 /* ABMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMovieViewController.h; sourceTree = "<group>"; };
 		4D7EE47E19FC326700083C49 /* ABMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMovieViewController.m; sourceTree = "<group>"; };
 		4D7EE48019FC5AB300083C49 /* ABMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMovieCell.h; sourceTree = "<group>"; };
@@ -124,6 +133,7 @@
 		4D1E3D9919FC2C1E000D376C = {
 			isa = PBXGroup;
 			children = (
+				4D78C9221A0B045700577A3C /* RefreshController */,
 				4D78A6521A09C1D800F42A85 /* RESideMenu */,
 				4D1E3DAB19FC2C1E000D376C /* MyTvBox */,
 				4D1E3DCA19FC2C1E000D376C /* MyTvBoxTests */,
@@ -166,8 +176,6 @@
 				4D78A6601A09C21D00F42A85 /* ABLeftMenuViewController.m */,
 				4D78A65C1A09C21000F42A85 /* ABRootViewController.h */,
 				4D78A65D1A09C21000F42A85 /* ABRootViewController.m */,
-				4D78A6621A09C22F00F42A85 /* ABFirstViewController.h */,
-				4D78A6631A09C22F00F42A85 /* ABFirstViewController.m */,
 				4D1E3DB719FC2C1E000D376C /* Main.storyboard */,
 				4D1E3DBA19FC2C1E000D376C /* ABViewController.h */,
 				4D1E3DBB19FC2C1E000D376C /* ABViewController.m */,
@@ -180,6 +188,9 @@
 		4D1E3DAC19FC2C1E000D376C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D78C92B1A0B071200577A3C /* storehouse.plist */,
+				4D78C92F1A0B0C7600577A3C /* custom.plist */,
+				4D78C9291A0B068A00577A3C /* AKTA.plist */,
 				4D1E3DAD19FC2C1E000D376C /* MyTvBox-Info.plist */,
 				4D1E3DAE19FC2C1E000D376C /* InfoPlist.strings */,
 				4D1E3DB119FC2C1E000D376C /* main.m */,
@@ -217,6 +228,17 @@
 				4D78A6581A09C1D800F42A85 /* UIViewController+RESideMenu.m */,
 			);
 			path = RESideMenu;
+			sourceTree = "<group>";
+		};
+		4D78C9221A0B045700577A3C /* RefreshController */ = {
+			isa = PBXGroup;
+			children = (
+				4D78C9231A0B047B00577A3C /* BarItem.h */,
+				4D78C9241A0B047B00577A3C /* BarItem.m */,
+				4D78C9251A0B047B00577A3C /* CBStoreHouseRefreshControl.h */,
+				4D78C9261A0B047B00577A3C /* CBStoreHouseRefreshControl.m */,
+			);
+			name = RefreshController;
 			sourceTree = "<group>";
 		};
 		4D7EE47A19FC323200083C49 /* Movies */ = {
@@ -343,8 +365,11 @@
 				4D7EE4931A0091A900083C49 /* ABReviewCell.xib in Resources */,
 				4D1E3DBE19FC2C1E000D376C /* Images.xcassets in Resources */,
 				4D1E3DB019FC2C1E000D376C /* InfoPlist.strings in Resources */,
+				4D78C92A1A0B068A00577A3C /* AKTA.plist in Resources */,
 				4D1E3DB919FC2C1E000D376C /* Main.storyboard in Resources */,
+				4D78C9301A0B0C7700577A3C /* custom.plist in Resources */,
 				4D7EE48419FC5AB300083C49 /* ABMovieCell.xib in Resources */,
+				4D78C92C1A0B071200577A3C /* storehouse.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +423,7 @@
 			files = (
 				4D7EE47F19FC326700083C49 /* ABMovieViewController.m in Sources */,
 				4D78A6591A09C1D800F42A85 /* RECommonFunctions.m in Sources */,
+				4D78C9271A0B047B00577A3C /* BarItem.m in Sources */,
 				4D7EE48919FC97C600083C49 /* ABMovie.m in Sources */,
 				4D7EE48C19FF1B3D00083C49 /* ABMovieDetailViewController.m in Sources */,
 				4D1E3DB219FC2C1E000D376C /* main.m in Sources */,
@@ -408,7 +434,7 @@
 				4D7EE4921A0091A900083C49 /* ABReviewCell.m in Sources */,
 				4D78A65A1A09C1D800F42A85 /* RESideMenu.m in Sources */,
 				4D1E3DB619FC2C1E000D376C /* ABAppDelegate.m in Sources */,
-				4D78A6641A09C22F00F42A85 /* ABFirstViewController.m in Sources */,
+				4D78C9281A0B047B00577A3C /* CBStoreHouseRefreshControl.m in Sources */,
 				4D78A65B1A09C1D800F42A85 /* UIViewController+RESideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

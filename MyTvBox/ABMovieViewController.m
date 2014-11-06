@@ -11,9 +11,11 @@
 #import "UIImageView+AFNetworking.h"
 #import "ABMovie.h"
 #import "ABMovieCell.h"
+#import "CBStoreHouseRefreshControl.h"
 
 @interface ABMovieViewController ()
 
+@property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray *movies;
@@ -41,6 +43,8 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"ABMovieCell" bundle:nil] forCellReuseIdentifier:@"ABMovieCell"];
+    
+    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView target:self refreshAction:@selector(refreshTriggered:) plist:@"custom" color:[UIColor whiteColor] lineWidth:1.5 dropHeight:80 scale:1 horizontalRandomness:150 reverseLoadingAnimation:YES internalAnimationFactor:0.5];
 }
 
 - (void)didReceiveMemoryWarning
@@ -141,6 +145,30 @@
         }
     }
     self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+}
+
+#pragma mark - Notifying refresh control of scrolling
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.storeHouseRefreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self.storeHouseRefreshControl scrollViewDidEndDragging];
+}
+
+#pragma mark - Listening for the user to trigger a refresh
+
+- (void)refreshTriggered:(id)sender
+{
+    [self performSelector:@selector(finishRefreshControl) withObject:nil afterDelay:3 inModes:@[NSRunLoopCommonModes]];
+}
+
+- (void)finishRefreshControl
+{
+    [self.storeHouseRefreshControl finishingLoading];
 }
 
 @end

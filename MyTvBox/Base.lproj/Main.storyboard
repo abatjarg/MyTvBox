@@ -7,7 +7,7 @@
         <!--Movie View Controller - In Theaters-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ABMovieViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="ABMovieViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -24,7 +24,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="In Theaters" id="kES-AU-Kfc"/>
+                    <navigationItem key="navigationItem" title="In Theaters" id="kES-AU-Kfc">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="xA0-Fh-L9C">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="vXZ-lx-hvc" id="RE6-sh-99h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Hof-EA-0kb" id="g37-KS-B0b"/>
                         <segue destination="IfV-F7-zSV" kind="push" identifier="toMovieDetailViewController" id="G7S-xK-fXE"/>
@@ -107,35 +113,10 @@
             </objects>
             <point key="canvasLocation" x="1919" y="-661"/>
         </scene>
-        <!--First View Controller-->
-        <scene sceneID="l9A-PL-pFj">
-            <objects>
-                <viewController storyboardIdentifier="firstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jKX-7b-6pb" customClass="ABFirstViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="htp-76-SuL"/>
-                        <viewControllerLayoutGuide type="bottom" id="k0k-9d-ze6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="POg-Pj-pdk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Pd3-hN-aKD">
-                        <barButtonItem key="leftBarButtonItem" image="Menu" id="ut0-y0-J2w">
-                            <connections>
-                                <action selector="presentLeftMenuViewController:" destination="jKX-7b-6pb" id="TZ4-hb-DIh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nye-IQ-k4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1930" y="95"/>
-        </scene>
         <!--Navigation Controller - Movie-->
         <scene sceneID="elc-eJ-dk1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eFO-Uj-ZMT" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="contentViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eFO-Uj-ZMT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Movie" id="Ze6-ll-x0t"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="1Lc-na-KFI">
@@ -169,24 +150,6 @@
             </objects>
             <point key="canvasLocation" x="930" y="95"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pOF-jD-WCU">
-            <objects>
-                <navigationController storyboardIdentifier="contentViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CGt-mR-kLj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uyw-vV-Npf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jKX-7b-6pb" kind="relationship" relationship="rootViewController" id="K0H-eT-g1t"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="efA-bh-PDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1456" y="95"/>
-        </scene>
         <!--Left Menu View Controller-->
         <scene sceneID="frD-kh-4HD">
             <objects>
@@ -203,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9z-8U-FW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456" y="782"/>
+            <point key="canvasLocation" x="1456" y="111"/>
         </scene>
     </scenes>
     <resources>
