@@ -126,6 +126,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="4oH-zJ-aOy"/>
+                        <segue destination="bfs-In-LMP" kind="push" identifier="second" id="PD0-u5-pTR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOI-j1-46x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zR-J9-bbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="95"/>
+            <point key="canvasLocation" x="46" y="-333"/>
         </scene>
         <!--Left Menu View Controller-->
         <scene sceneID="frD-kh-4HD">
@@ -166,7 +167,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9z-8U-FW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456" y="111"/>
+            <point key="canvasLocation" x="496" y="-333"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5qn-BH-7Aq">
+            <objects>
+                <viewController storyboardIdentifier="secondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bfs-In-LMP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K8a-QV-AIL"/>
+                        <viewControllerLayoutGuide type="bottom" id="olk-0T-LjZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yBZ-BA-9YR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="s4A-rD-F7K">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="gQn-Tn-Nc6">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="bfs-In-LMP" id="Iv0-OM-b0p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OO8-nM-kr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1456" y="35"/>
         </scene>
     </scenes>
     <resources>
