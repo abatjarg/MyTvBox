@@ -64,7 +64,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 54;
+    return 60;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -74,7 +74,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 5;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,10 +92,10 @@
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-    NSArray *titles = @[@"Home", @"Calendar", @"Profile", @"Settings", @"Log Out"];
-    //NSArray *images = @[@"IconHome", @"IconCalendar", @"IconProfile", @"IconSettings", @"IconEmpty"];
+    NSArray *titles = @[@"Now Playing", @"On DVD", @"Tv Shows", @"Settings"];
+    NSArray *images = @[@"nowPlaying", @"onDVD", @"tvShows", @"settings"];
     cell.textLabel.text = titles[indexPath.row];
-    //cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
     
     return cell;
 }
