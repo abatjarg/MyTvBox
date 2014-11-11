@@ -14,7 +14,6 @@
 		4D1E3DB219FC2C1E000D376C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3DB119FC2C1E000D376C /* main.m */; };
 		4D1E3DB619FC2C1E000D376C /* ABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3DB519FC2C1E000D376C /* ABAppDelegate.m */; };
 		4D1E3DB919FC2C1E000D376C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E3DB719FC2C1E000D376C /* Main.storyboard */; };
-		4D1E3DBC19FC2C1E000D376C /* ABViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3DBB19FC2C1E000D376C /* ABViewController.m */; };
 		4D1E3DBE19FC2C1E000D376C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E3DBD19FC2C1E000D376C /* Images.xcassets */; };
 		4D1E3DC519FC2C1E000D376C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1E3DC419FC2C1E000D376C /* XCTest.framework */; };
 		4D1E3DC619FC2C1E000D376C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1E3DA519FC2C1E000D376C /* Foundation.framework */; };
@@ -65,8 +64,6 @@
 		4D1E3DB419FC2C1E000D376C /* ABAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABAppDelegate.h; sourceTree = "<group>"; };
 		4D1E3DB519FC2C1E000D376C /* ABAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABAppDelegate.m; sourceTree = "<group>"; };
 		4D1E3DB819FC2C1E000D376C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4D1E3DBA19FC2C1E000D376C /* ABViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABViewController.h; sourceTree = "<group>"; };
-		4D1E3DBB19FC2C1E000D376C /* ABViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABViewController.m; sourceTree = "<group>"; };
 		4D1E3DBD19FC2C1E000D376C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4D1E3DC319FC2C1E000D376C /* MyTvBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTvBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1E3DC419FC2C1E000D376C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -167,18 +164,13 @@
 		4D1E3DAB19FC2C1E000D376C /* MyTvBox */ = {
 			isa = PBXGroup;
 			children = (
+				4D6C6D9B1A11B4790055C6E6 /* Navigation */,
 				4D7EE47C19FC324900083C49 /* TvShows */,
 				4D7EE47B19FC323C00083C49 /* DVDs */,
 				4D7EE47A19FC323200083C49 /* Movies */,
 				4D1E3DB419FC2C1E000D376C /* ABAppDelegate.h */,
 				4D1E3DB519FC2C1E000D376C /* ABAppDelegate.m */,
-				4D78A65F1A09C21D00F42A85 /* ABLeftMenuViewController.h */,
-				4D78A6601A09C21D00F42A85 /* ABLeftMenuViewController.m */,
-				4D78A65C1A09C21000F42A85 /* ABRootViewController.h */,
-				4D78A65D1A09C21000F42A85 /* ABRootViewController.m */,
 				4D1E3DB719FC2C1E000D376C /* Main.storyboard */,
-				4D1E3DBA19FC2C1E000D376C /* ABViewController.h */,
-				4D1E3DBB19FC2C1E000D376C /* ABViewController.m */,
 				4D1E3DBD19FC2C1E000D376C /* Images.xcassets */,
 				4D1E3DAC19FC2C1E000D376C /* Supporting Files */,
 			);
@@ -215,6 +207,17 @@
 				4D1E3DCD19FC2C1E000D376C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D6C6D9B1A11B4790055C6E6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4D78A65F1A09C21D00F42A85 /* ABLeftMenuViewController.h */,
+				4D78A6601A09C21D00F42A85 /* ABLeftMenuViewController.m */,
+				4D78A65C1A09C21000F42A85 /* ABRootViewController.h */,
+				4D78A65D1A09C21000F42A85 /* ABRootViewController.m */,
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 		4D78A6521A09C1D800F42A85 /* RESideMenu */ = {
@@ -429,7 +432,6 @@
 				4D1E3DB219FC2C1E000D376C /* main.m in Sources */,
 				4D7EE48319FC5AB300083C49 /* ABMovieCell.m in Sources */,
 				4D78A6611A09C21D00F42A85 /* ABLeftMenuViewController.m in Sources */,
-				4D1E3DBC19FC2C1E000D376C /* ABViewController.m in Sources */,
 				4D78A65E1A09C21000F42A85 /* ABRootViewController.m in Sources */,
 				4D7EE4921A0091A900083C49 /* ABReviewCell.m in Sources */,
 				4D78A65A1A09C1D800F42A85 /* RESideMenu.m in Sources */,

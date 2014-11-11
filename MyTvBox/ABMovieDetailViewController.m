@@ -57,8 +57,6 @@
     return url;
 }
 
-//http://api.rottentomatoes.com/api/public/v1.0/movie_alias.json?id=2713180&type=imdb&apikey=deucvtu94kwb63bvt28wf9xa
-
 - (void)loadData
 {
     NSString *url = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movie_alias.json?id=%@&type=imdb&apikey=deucvtu94kwb63bvt28wf9xa", self.movie.imdbID];
