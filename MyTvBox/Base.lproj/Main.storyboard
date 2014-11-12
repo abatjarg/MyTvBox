@@ -104,9 +104,12 @@
                                 <rect key="frame" x="50" y="270" width="221" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Detail"/>
+                                    <segment title="Review"/>
                                 </segments>
+                                <connections>
+                                    <action selector="detailOrReview:" destination="IfV-F7-zSV" eventType="valueChanged" id="WD3-1W-8XG"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
