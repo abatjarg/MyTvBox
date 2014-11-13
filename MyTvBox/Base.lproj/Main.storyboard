@@ -182,10 +182,10 @@
             </objects>
             <point key="canvasLocation" x="496" y="-333"/>
         </scene>
-        <!--View Controller-->
+        <!--Tv Show View Controller-->
         <scene sceneID="5qn-BH-7Aq">
             <objects>
-                <viewController storyboardIdentifier="secondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bfs-In-LMP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bfs-In-LMP" customClass="ABTvShowViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K8a-QV-AIL"/>
                         <viewControllerLayoutGuide type="bottom" id="olk-0T-LjZ"/>

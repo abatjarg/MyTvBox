@@ -37,6 +37,7 @@
 		4D7EE48C19FF1B3D00083C49 /* ABMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE48B19FF1B3D00083C49 /* ABMovieDetailViewController.m */; };
 		4D7EE4921A0091A900083C49 /* ABReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE4901A0091A900083C49 /* ABReviewCell.m */; };
 		4D7EE4931A0091A900083C49 /* ABReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EE4911A0091A900083C49 /* ABReviewCell.xib */; };
+		4D8039AF1A1454F000094A34 /* ABTvShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8039AE1A1454F000094A34 /* ABTvShowViewController.m */; };
 		678EF669F53C159FF24024DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D5D6BAD7F8525F0A9168F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,8 @@
 		4D7EE48F1A0091A900083C49 /* ABReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABReviewCell.h; sourceTree = "<group>"; };
 		4D7EE4901A0091A900083C49 /* ABReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABReviewCell.m; sourceTree = "<group>"; };
 		4D7EE4911A0091A900083C49 /* ABReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABReviewCell.xib; sourceTree = "<group>"; };
+		4D8039AD1A1454F000094A34 /* ABTvShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTvShowViewController.h; sourceTree = "<group>"; };
+		4D8039AE1A1454F000094A34 /* ABTvShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTvShowViewController.m; sourceTree = "<group>"; };
 		D1D5D6BAD7F8525F0A9168F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -273,6 +276,8 @@
 		4D7EE47C19FC324900083C49 /* TvShows */ = {
 			isa = PBXGroup;
 			children = (
+				4D8039AD1A1454F000094A34 /* ABTvShowViewController.h */,
+				4D8039AE1A1454F000094A34 /* ABTvShowViewController.m */,
 			);
 			name = TvShows;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 				4D78C9271A0B047B00577A3C /* BarItem.m in Sources */,
 				4D7EE48919FC97C600083C49 /* ABMovie.m in Sources */,
 				4D7EE48C19FF1B3D00083C49 /* ABMovieDetailViewController.m in Sources */,
+				4D8039AF1A1454F000094A34 /* ABTvShowViewController.m in Sources */,
 				4D1E3DB219FC2C1E000D376C /* main.m in Sources */,
 				4D7EE48319FC5AB300083C49 /* ABMovieCell.m in Sources */,
 				4D78A6611A09C21D00F42A85 /* ABLeftMenuViewController.m in Sources */,
