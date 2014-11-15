@@ -20,6 +20,7 @@
 		4D1E3DC719FC2C1E000D376C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1E3DA919FC2C1E000D376C /* UIKit.framework */; };
 		4D1E3DCF19FC2C1E000D376C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E3DCD19FC2C1E000D376C /* InfoPlist.strings */; };
 		4D1E3DD119FC2C1E000D376C /* MyTvBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3DD019FC2C1E000D376C /* MyTvBoxTests.m */; };
+		4D689A321A17069200D714D6 /* ABTvShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D689A311A17069200D714D6 /* ABTvShowCell.m */; };
 		4D78A6591A09C1D800F42A85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A6541A09C1D800F42A85 /* RECommonFunctions.m */; };
 		4D78A65A1A09C1D800F42A85 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A6561A09C1D800F42A85 /* RESideMenu.m */; };
 		4D78A65B1A09C1D800F42A85 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A6581A09C1D800F42A85 /* UIViewController+RESideMenu.m */; };
@@ -71,6 +72,8 @@
 		4D1E3DCC19FC2C1E000D376C /* MyTvBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTvBoxTests-Info.plist"; sourceTree = "<group>"; };
 		4D1E3DCE19FC2C1E000D376C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D1E3DD019FC2C1E000D376C /* MyTvBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTvBoxTests.m; sourceTree = "<group>"; };
+		4D689A301A17069200D714D6 /* ABTvShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTvShowCell.h; sourceTree = "<group>"; };
+		4D689A311A17069200D714D6 /* ABTvShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTvShowCell.m; sourceTree = "<group>"; };
 		4D78A6531A09C1D800F42A85 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		4D78A6541A09C1D800F42A85 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		4D78A6551A09C1D800F42A85 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 			children = (
 				4D8039AD1A1454F000094A34 /* ABTvShowViewController.h */,
 				4D8039AE1A1454F000094A34 /* ABTvShowViewController.m */,
+				4D689A301A17069200D714D6 /* ABTvShowCell.h */,
+				4D689A311A17069200D714D6 /* ABTvShowCell.m */,
 			);
 			name = TvShows;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				4D7EE48C19FF1B3D00083C49 /* ABMovieDetailViewController.m in Sources */,
 				4D8039AF1A1454F000094A34 /* ABTvShowViewController.m in Sources */,
 				4D1E3DB219FC2C1E000D376C /* main.m in Sources */,
+				4D689A321A17069200D714D6 /* ABTvShowCell.m in Sources */,
 				4D7EE48319FC5AB300083C49 /* ABMovieCell.m in Sources */,
 				4D78A6611A09C21D00F42A85 /* ABLeftMenuViewController.m in Sources */,
 				4D78A65E1A09C21000F42A85 /* ABRootViewController.m in Sources */,
