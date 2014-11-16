@@ -39,6 +39,7 @@
 		4D7EE4921A0091A900083C49 /* ABReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EE4901A0091A900083C49 /* ABReviewCell.m */; };
 		4D7EE4931A0091A900083C49 /* ABReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EE4911A0091A900083C49 /* ABReviewCell.xib */; };
 		4D8039AF1A1454F000094A34 /* ABTvShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8039AE1A1454F000094A34 /* ABTvShowViewController.m */; };
+		4DF58C061A183741002D5A35 /* ABTvShows.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF58C051A183741002D5A35 /* ABTvShows.m */; };
 		678EF669F53C159FF24024DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D5D6BAD7F8525F0A9168F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,8 @@
 		4D7EE4911A0091A900083C49 /* ABReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABReviewCell.xib; sourceTree = "<group>"; };
 		4D8039AD1A1454F000094A34 /* ABTvShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTvShowViewController.h; sourceTree = "<group>"; };
 		4D8039AE1A1454F000094A34 /* ABTvShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTvShowViewController.m; sourceTree = "<group>"; };
+		4DF58C041A183741002D5A35 /* ABTvShows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTvShows.h; sourceTree = "<group>"; };
+		4DF58C051A183741002D5A35 /* ABTvShows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTvShows.m; sourceTree = "<group>"; };
 		D1D5D6BAD7F8525F0A9168F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -283,6 +286,8 @@
 				4D8039AE1A1454F000094A34 /* ABTvShowViewController.m */,
 				4D689A301A17069200D714D6 /* ABTvShowCell.h */,
 				4D689A311A17069200D714D6 /* ABTvShowCell.m */,
+				4DF58C041A183741002D5A35 /* ABTvShows.h */,
+				4DF58C051A183741002D5A35 /* ABTvShows.m */,
 			);
 			name = TvShows;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				4D78A6611A09C21D00F42A85 /* ABLeftMenuViewController.m in Sources */,
 				4D78A65E1A09C21000F42A85 /* ABRootViewController.m in Sources */,
 				4D7EE4921A0091A900083C49 /* ABReviewCell.m in Sources */,
+				4DF58C061A183741002D5A35 /* ABTvShows.m in Sources */,
 				4D78A65A1A09C1D800F42A85 /* RESideMenu.m in Sources */,
 				4D1E3DB619FC2C1E000D376C /* ABAppDelegate.m in Sources */,
 				4D78C9281A0B047B00577A3C /* CBStoreHouseRefreshControl.m in Sources */,
