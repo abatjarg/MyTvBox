@@ -7,6 +7,7 @@
 //
 
 #import "ABTvShowViewController.h"
+#import "ABTvShows.h"
 
 @interface ABTvShowViewController ()
 
@@ -60,6 +61,62 @@
         else
         {
             NSLog(@"Error!!!");
+        }
+        
+    }];
+}
+
+- (void)loadDataTopRated
+{
+    NSString *url = @"http://api.themoviedb.org/3/tv/top_rated?api_key=0e7bf9123871b0fe728caf5636fd7e47";
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:12];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
+        
+        NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (!connectionError && responseCode == 200) {
+            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSMutableArray *array = [[NSMutableArray alloc]initWithArray:[object objectForKey:@"results"]];
+            self.tvShows = [[NSMutableArray alloc] init];
+            
+            for(NSDictionary *item in array){
+                ABTvShow *tvShow = [[ABTvShow alloc] initWithDictionary:item];
+                [self.tvShows addObject:tvShow];
+                [self.tvShowView reloadData];
+            }
+        }
+        else
+        {
+            NSLog(@"Error!!!");
+        }
+        
+    }];
+}
+
+- (void)loadDataAiringToday
+{
+    NSString *url = @"http://api.themoviedb.org/3/tv/airing_today?api_key=0e7bf9123871b0fe728caf5636fd7e47";
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:12];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
+        
+        NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
+        
+        if (!connectionError && responseCode == 200) {
+            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSMutableArray *array = [[NSMutableArray alloc]initWithArray:[object objectForKey:@"results"]];
+            self.tvShows = [[NSMutableArray alloc] init];
+            
+            for(NSDictionary *item in array){
+                ABTvShow *tvShow = [[ABTvShow alloc] initWithDictionary:item];
+                [self.tvShows addObject:tvShow];
+                [self.tvShowView reloadData];
+            }
+        }
+        else
+        {
+            [self showNetworkError];
         }
         
     }];
