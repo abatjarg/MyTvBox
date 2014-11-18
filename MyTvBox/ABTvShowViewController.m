@@ -7,7 +7,7 @@
 //
 
 #import "ABTvShowViewController.h"
-#import "ABTvShows.h"
+#import "ABTvShow.h"
 
 @interface ABTvShowViewController ()
 
