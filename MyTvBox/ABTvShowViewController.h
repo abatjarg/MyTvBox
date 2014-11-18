@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ABTvShowViewController : UIViewController
+@interface ABTvShowViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end

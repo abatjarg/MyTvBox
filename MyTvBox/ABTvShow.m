@@ -10,4 +10,15 @@
 
 @implementation ABTvShow
 
+- (id)initWithDictionary:(NSDictionary *)tvShow
+{
+    self = [super self];
+    if (self) {
+        self.title = tvShow[@"original_name"];
+        self.imageUrl = tvShow[@"poster_path"];
+    }
+    
+    return self;
+}
+
 @end

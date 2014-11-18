@@ -10,4 +10,9 @@
 
 @interface ABTvShow : NSObject
 
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *imageUrl;
+
+- (id)initWithDictionary:(NSDictionary *)tvShow;
+
 @end

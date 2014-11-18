@@ -7,11 +7,15 @@
 //
 
 #import "ABTvShowViewController.h"
+#import "UIImageView+AFNetworking.h"
 #import "ABTvShow.h"
+#import "ABTvShowCell.h"
 
 @interface ABTvShowViewController ()
 
 @property (strong, nonatomic) NSMutableArray *tvShows;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *tvShowView;
 
 @end
 
@@ -30,6 +34,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.tvShowView setDataSource:self];
+    [self.tvShowView setDelegate:self];
+    [self loadDataAiringToday];
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,10 +123,41 @@
         }
         else
         {
-            [self showNetworkError];
+            NSLog(@"Network error");
+            //[self showNetworkError];
         }
         
     }];
+}
+
+- (NSString *)grabImageUrl:(NSString *)secondPart
+{
+    NSString *firstPart = @"http://image.tmdb.org/t/p/w500/";
+    NSString *url = [NSString stringWithFormat:@"%@%@", firstPart, secondPart];
+    return url;
+}
+
+#pragma mark - Collection View
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.tvShows count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ABTvShowCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tvShowCell" forIndexPath:indexPath];
+    
+    ABTvShow *tvShow = self.tvShows[indexPath.row];
+    cell.titleLabel.text = tvShow.title;
+    [cell.posterView setImageWithURL:[NSURL URLWithString:[self grabImageUrl:tvShow.imageUrl]]];
+    
+    return cell;
 }
 
 /*
