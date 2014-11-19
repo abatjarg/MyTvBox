@@ -37,6 +37,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.translucent = YES;
+    [[self.navigationController navigationBar] setTintColor:[UIColor whiteColor]];
     [self getNowPlaying];
     
     self.tableView.rowHeight = 160;

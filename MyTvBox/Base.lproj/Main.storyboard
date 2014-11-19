@@ -201,11 +201,11 @@
                                     <size key="itemSize" width="150" height="220"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tvShowCell" id="2X2-Yh-NIC" customClass="ABTvShowCell">
-                                        <rect key="frame" x="5" y="69" width="150" height="220"/>
+                                        <rect key="frame" x="5" y="64" width="150" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
@@ -215,19 +215,11 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="155" height="220"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xd-RV-DC8">
-                                                    <rect key="frame" x="20" y="179" width="110" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
                                             <outlet property="posterView" destination="pnc-7Z-L1Q" id="AGU-jP-2uu"/>
-                                            <outlet property="titleLabel" destination="7xd-RV-DC8" id="G2F-GA-yTN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -236,11 +228,24 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="s4A-rD-F7K">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="gQn-Tn-Nc6">
                             <connections>
                                 <action selector="presentLeftMenuViewController:" destination="bfs-In-LMP" id="Iv0-OM-b0p"/>
                             </connections>
                         </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kWU-a0-ulO">
+                            <rect key="frame" x="60" y="7" width="242" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Today"/>
+                                <segment title=" Top Rated"/>
+                                <segment title="Up coming"/>
+                            </segments>
+                            <connections>
+                                <action selector="changeTvShowData:" destination="bfs-In-LMP" eventType="valueChanged" id="LL9-fv-UGW"/>
+                            </connections>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="tvShowView" destination="YW6-Ga-YHO" id="M8G-zV-3ER"/>

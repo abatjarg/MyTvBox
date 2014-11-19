@@ -34,6 +34,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.translucent = YES;
+    [[self.navigationController navigationBar] setTintColor:[UIColor whiteColor]];
     [self.tvShowView setDataSource:self];
     [self.tvShowView setDelegate:self];
     [self loadDataAiringToday];
@@ -137,6 +140,22 @@
     return url;
 }
 
+
+- (IBAction)changeTvShowData:(UISegmentedControl *)sender
+{
+    NSInteger selectedSegment = sender.selectedSegmentIndex;
+    if (selectedSegment == 0) {
+        [self loadDataOnAir];
+        [self.tvShowView reloadData];
+    }else if(selectedSegment == 1){
+        [self loadDataTopRated];
+        [self.tvShowView reloadData];
+    }else{
+        [self loadDataAiringToday];
+        [self.tvShowView reloadData];
+    }
+}
+
 #pragma mark - Collection View
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -154,7 +173,6 @@
     ABTvShowCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tvShowCell" forIndexPath:indexPath];
     
     ABTvShow *tvShow = self.tvShows[indexPath.row];
-    cell.titleLabel.text = tvShow.title;
     [cell.posterView setImageWithURL:[NSURL URLWithString:[self grabImageUrl:tvShow.imageUrl]]];
     
     return cell;
