@@ -57,22 +57,6 @@
     return url;
 }
 
-- (IBAction)detailOrReview:(UISegmentedControl *)sender
-{
-    switch (sender.selectedSegmentIndex)
-    {
-        case 0:
-            NSLog(@"Detail Pressed!!!");
-            break;
-        case 1:
-            NSLog(@"Review Pressed!!!");
-            break;
-        default:
-            break;
-    }
-}
-
-
 - (void)loadData
 {
     NSString *url = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movie_alias.json?id=%@&type=imdb&apikey=deucvtu94kwb63bvt28wf9xa", self.movie.imdbID];
@@ -148,6 +132,15 @@
     return cell;
 }
 
+- (IBAction)changeBetweenDetailReview:(UISegmentedControl *)sender
+{
+    NSInteger selectedSegment = sender.selectedSegmentIndex;
+    if (selectedSegment == 0) {
+        self.reviewTableView.hidden = YES;
+    }else if(selectedSegment == 1){
+        self.reviewTableView.hidden = NO;
+    }
+}
 
 
 
