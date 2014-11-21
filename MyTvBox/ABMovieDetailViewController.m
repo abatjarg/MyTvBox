@@ -50,6 +50,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Helper functions
+
 - (NSString *)grabImageUrl:(NSString *)secondPart
 {
     NSString *firstPart = @"http://image.tmdb.org/t/p/w500/";
@@ -102,9 +104,9 @@
     }];
 }
 
-/*
 #pragma mark - Navigation
 
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
