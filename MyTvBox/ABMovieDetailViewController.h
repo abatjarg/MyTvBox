@@ -17,5 +17,6 @@
 
 - (IBAction)playTrailerButtonPressed:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITableView *reviewTableView;
+@property (weak, nonatomic) IBOutlet UIView *detailView;
 
 @end

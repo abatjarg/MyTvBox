@@ -132,15 +132,17 @@
     return cell;
 }
 
-- (IBAction)changeBetweenDetailReview:(UISegmentedControl *)sender
-{
-    NSInteger selectedSegment = sender.selectedSegmentIndex;
-    if (selectedSegment == 0) {
-        self.reviewTableView.hidden = YES;
-    }else if(selectedSegment == 1){
-        self.reviewTableView.hidden = NO;
-    }
-}
+//- (IBAction)changeBetweenDetailReview:(UISegmentedControl *)sender
+//{
+//    NSInteger selectedSegment = sender.selectedSegmentIndex;
+//    if (selectedSegment == 0) {
+//        self.reviewTableView.hidden = YES;
+//        self.detailView.hidden = NO;
+//    }else if(selectedSegment == 1){
+//        self.reviewTableView.hidden = NO;
+//        self.detailView.hidden = YES;
+//    }
+//}
 
 
 
