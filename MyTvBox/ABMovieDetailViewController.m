@@ -5,6 +5,7 @@
 //  Created by Ariunjargal on 10/27/14.
 //  Copyright (c) 2014 Ariunjargal Batjargal. All rights reserved.
 //
+// Code cleanup
 
 #import "ABMovieDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
